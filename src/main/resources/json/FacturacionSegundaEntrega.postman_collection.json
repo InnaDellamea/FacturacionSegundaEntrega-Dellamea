@@ -1,0 +1,294 @@
+{
+	"info": {
+		"_postman_id": "c78bed14-ea6e-4b7c-8405-e8235a11a72a",
+		"name": "FacturacionSegundaEntrega",
+		"description": "Colección para probar todos los endpoints del proyecto de facturación",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44327607",
+		"_collection_link": "https://inna-6756648.postman.co/workspace/3704f903-0158-4bf7-8082-5a29bcc35c75/collection/44327607-c78bed14-ea6e-4b7c-8405-e8235a11a72a?action=share&source=collection_link&creator=44327607"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Listar clientes",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cliente por ID",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/clientes/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar cliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Juan P.\",\r\n  \"email\": \"juanp@mail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/clientes/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Juan\",\r\n  \"apellido\": \"Pérez\",\r\n  \"email\": \"juan@example.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/clientes/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "Listar productos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Producto por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/productos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar prodcuto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Planta A\",\r\n  \"precio\": 500\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/productos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/productos/1\n",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"1\n"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "venta",
+			"item": [
+				{
+					"name": "Crear venta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"clienteId\": 2,\r\n  \"productosIds\": [1, 3, 4]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ventas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ventas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar ventas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "GET http://localhost:8080/api/ventas\n",
+							"protocol": "GET http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ventas\n"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
